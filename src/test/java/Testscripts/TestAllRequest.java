@@ -44,7 +44,7 @@ public static long Responsetime;
         GetExpectedStatusCode=Integer.parseInt(getProperty("GetExpectedStatusCode"));
         Assert.assertEquals(response.getStatusCode(), GetExpectedStatusCode);
         userId = response.jsonPath().getString("data[0].id");
-//        response.then().assertThat().body(matchesJsonSchemaInClasspath("createUserSchema.json"));
+
     }
 
     @Test(priority = 3, dependsOnMethods = "TC02_GetListOfUser")
@@ -55,9 +55,7 @@ public static long Responsetime;
         GetExpectedStatusCode=Integer.parseInt(getProperty("GetExpectedStatusCode"));
         Assert.assertEquals(response.getStatusCode(), GetExpectedStatusCode);
         String actualId = response.jsonPath().getString("data.id");
-//        System.out.println("Actual userId :"+actualId);
         Assert.assertEquals(actualId, userId, "Returned ID does not match created user ID");
-//        response.then().assertThat().body(matchesJsonSchemaInClasspath("createUserSchema.json"));
     }
 
     @Test(priority = 4, dependsOnMethods = "TC03_GetUserById")

@@ -18,7 +18,7 @@
 <dependency>
     <groupId>io.rest-assured</groupId>
     <artifactId>json-schema-validator</artifactId>
-    <version>5.3.2</version> <!-- or the latest version -->
+    <version>5.3.2</version> 
     <scope>test</scope>
 </dependency>
     <dependency>
@@ -39,7 +39,7 @@
       <version>1.1.1</version>
     </dependency>
 
-    <!-- Only one logging binding (logback-classic) -->
+  
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
