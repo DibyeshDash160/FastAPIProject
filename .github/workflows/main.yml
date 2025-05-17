@@ -31,15 +31,16 @@ jobs:
       - name: Run Tests with Maven
         run: mvn clean test
 
-      - name: Install Allure Commandline
-        uses: simple-elf/allure-commandline@v1.0
-        with:
-          version: 2.23.0
+      - name: Install Allure CLI
+        uses: actions/setup-node@v3
+
+      - name: Install Allure Commandline Globally
+        run: npm install -g allure-commandline --save-dev
 
       - name: Generate Allure Report
         run: allure generate target/allure-results --clean -o target/allure-report
 
-      - name: Upload Allure Report
+      - name: Upload Allure Report Artifact
         uses: actions/upload-artifact@v3
         with:
           name: allure-report
