@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-17T12:53:12 IST" name="Default suite" finished-at="2025-05-17T12:53:17 IST" duration-ms="4822">
+    <groups>
+    </groups>
+    <test started-at="2025-05-17T12:53:12 IST" name="Default test" finished-at="2025-05-17T12:53:17 IST" duration-ms="4822">
+      <class name="Testscripts.TestAllRequest">
+        <test-method signature="TC01_CreateUser_POST()[pri:1, instance:Testscripts.TestAllRequest@6cf0e0ba]" started-at="2025-05-17T12:53:13 IST" name="TC01_CreateUser_POST" finished-at="2025-05-17T12:53:17 IST" duration-ms="4762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01_CreateUser_POST -->
+      </class> <!-- Testscripts.TestAllRequest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
