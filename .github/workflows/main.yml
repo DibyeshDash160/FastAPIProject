@@ -32,7 +32,7 @@ jobs:
         run: mvn clean test
 
       - name: Install Allure Commandline
-       uses: simple-elf/allure-commandline@v1.0
+        uses: simple-elf/allure-commandline@v1.0
         with:
           allure-version: 2.23.0
 
