@@ -7,6 +7,9 @@ import org.testng.annotations.Test;
 import io.qameta.allure.*;
 import org.testng.annotations.Listeners;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
+import java.io.IOException;
+
 import io.github.cdimascio.dotenv.Dotenv;
 
 @Epic("User API Tests")
@@ -22,8 +25,8 @@ public static long Responsetime;
  // ------------------ Positive Test Cases ------------------ //
     
     @Test(description = "Create user with valid data",priority = 1)
-    public static void TC01_CreateUser_POST() {
-        baseUrl = getProperty("BaseUrl")+getProperty("PostRequestPathParameter");
+    public static void TC01_CreateUser_POST() throws IOException {
+        baseUrl = EnvConfigManager("baseUrl")+getProperty("PostRequestPathParameter");
         String NameValue = getProperty("PostRequestNameValue");
         String JobValue = getProperty("PostRequestJobValue");
         int PostRequestExpectedStatusCode = Integer.parseInt(getProperty("PostRequestExpectedStatusCode"));
